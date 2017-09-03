@@ -86,7 +86,7 @@ kbBot.ask("hello", completionHandler: {(answers, error) in
 
 ## Author
 
-Ben Bahrenburg, @bencoding
+Ben Bahrenburg, [@bencoding](https://twitter.com/bencoding)
 
 ## License
 
