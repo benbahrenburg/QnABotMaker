@@ -1,0 +1,6 @@
+framework module QnABotMaker {
+  umbrella header "QnABotMaker-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -4,8 +4,6 @@ target 'QnABotMaker_Example' do
   pod 'QnABotMaker', :path => '../'
 
   target 'QnABotMaker_Tests' do
-    inherit! :search_paths
-
-    
+    inherit! :search_paths    
   end
 end

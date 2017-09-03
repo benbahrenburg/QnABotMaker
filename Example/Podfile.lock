@@ -1,0 +1,16 @@
+PODS:
+  - QnABotMaker (0.1.0)
+
+DEPENDENCIES:
+  - QnABotMaker (from `../`)
+
+EXTERNAL SOURCES:
+  QnABotMaker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  QnABotMaker: 683fae4cf1ddacbe54c4890be6e12b1f8677c76f
+
+PODFILE CHECKSUM: d18035ec7aa2e98aa64646dc7c20efa096cdc4c7
+
+COCOAPODS: 1.3.1

@@ -30,8 +30,9 @@
 /* Begin PBXFileReference section */
 		008B01534702E7D6F8C2019A /* Pods_QnABotMaker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QnABotMaker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1766B10633D88F050C991AC2 /* Pods-QnABotMaker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QnABotMaker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QnABotMaker_Example/Pods-QnABotMaker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3E49153C1F5CC88000614CA2 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		43BAFEF05394A0840BBC2250 /* Pods_QnABotMaker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QnABotMaker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		521C1CB1816397C1CEB4A25C /* QnABotMaker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = QnABotMaker.podspec; path = ../QnABotMaker.podspec; sourceTree = "<group>"; };
+		521C1CB1816397C1CEB4A25C /* QnABotMaker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QnABotMaker.podspec; path = ../QnABotMaker.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* QnABotMaker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QnABotMaker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,11 +43,11 @@
 		607FACE51AFB9204008FA782 /* QnABotMaker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QnABotMaker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		74D21BF8CFBCB8DA6EF29418 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		74D21BF8CFBCB8DA6EF29418 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8598D7E50BBFB1220955A3D4 /* Pods-QnABotMaker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QnABotMaker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QnABotMaker_Tests/Pods-QnABotMaker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1DB6E286E00EE9FEE91F17F /* Pods-QnABotMaker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QnABotMaker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QnABotMaker_Tests/Pods-QnABotMaker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E2C586092BCEF8BBE43E6676 /* Pods-QnABotMaker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QnABotMaker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-QnABotMaker_Example/Pods-QnABotMaker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F5C5D33E9DDEDF227F36DC88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F5C5D33E9DDEDF227F36DC88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +144,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				3E49153C1F5CC88000614CA2 /* CHANGELOG.md */,
 				521C1CB1816397C1CEB4A25C /* QnABotMaker.podspec */,
 				F5C5D33E9DDEDF227F36DC88 /* README.md */,
 				74D21BF8CFBCB8DA6EF29418 /* LICENSE */,

@@ -1,0 +1,22 @@
+{
+  "name": "QnABotMaker",
+  "version": "0.1.0",
+  "summary": "A short description of QnABotMaker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ben Bahrenburg/QnABotMaker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ben Bahrenburg": "ben.bahrenburg@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Ben Bahrenburg/QnABotMaker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "QnABotMaker/Classes/**/*"
+}
