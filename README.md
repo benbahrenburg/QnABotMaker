@@ -1,20 +1,20 @@
 # QnABotMaker
 
-Convenience library for working with Microsoft's QnA Maker Service
+Convenience library for working with Microsoft's QnA Maker Service.  Microsoft QnA Maker Service lets you create FAQ Bots quickly.  The QnABotMaker library enables you to use the QnA Maker Service directly from within your iOS app.  Before getting started pleaes check out Microsoft [QnA Maker](https://qnamaker.ai).
 
 ## Getting Started
 
-Before you get started using this library you will need to create a QnA "Service" using Microsoft's [QnA Maker](https://qnamaker.ai)
+Before you get started using this library you will need to create a QnA "Service" using Microsoft's [QnA Maker](https://qnamaker.ai).
 
 Once you have published your QnA Service you will see a <b>Sample HTTP request</b> similar to the one shown below. 
 
-
-POST /knowledgebases/<b>581bd885-5588403d-9935fe3cd325c503</b>/generateAnswer
+~~~
+POST /knowledgebases/581bd885-5588403d-9935fe3cd325c503/generateAnswer
 Host: https://westus.api.cognitive.microsoft.com/qnamaker/v2.0
-Ocp-Apim-Subscription-Key: <b>b73f2abc20784927a330c7ad9e354e86</b>
+Ocp-Apim-Subscription-Key: b73f2abc20784927a330c7ad9e354e86
 Content-Type: application/json
 {"question":"hi"}
-
+~~~
 
 The QnABotMaker library needs a few of these parameters in order to connect to the [QnA Maker](https://qnamaker.ai) service.
 
@@ -24,6 +24,7 @@ POST /knowledgebases/<b>581bd885-5588403d-9935fe3cd325c503</b>/generateAnswer
 
 
 Next we will need your <b>Subscription Key</b> or <b>subscriptionKey</b>, this is the highlighted shown below.
+
 Ocp-Apim-Subscription-Key: <b>b73f2abc20784927a330c7ad9e354e86</b>
 
 
@@ -62,7 +63,7 @@ __Manually__
 Copy all `*.swift` files contained in `QnABotMaker/Classes/` directory into your project. 
 
 
-## Example
+## Using
 
 Using QnABotMaker couldn't be easier.  You simply create a new instance of the library and provide the <b>ask</b> function with a question.  The completion hander, <b>completionHandler</b>, will provide the QnA answers or an error if necessary.
 
