@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Convenience library for working with Microsoft QnA Maker Service'
 
   s.description   = <<-DESC
-    Convenience library for working with the Microsoft QnA Maker Service from iOS.
+      Simplifies working with Microsoft QnA Maker on iOS.
   DESC
 
   s.homepage         = 'https://github.com/benbahrenburg/QnABotMaker'
