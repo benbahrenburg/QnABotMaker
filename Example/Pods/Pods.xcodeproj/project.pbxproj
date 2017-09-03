@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2CAC6D2F1C3E35425B848EE7941C5C6F /* QnABotMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB0C4E633E56D96CC2B696C53859B2 /* QnABotMaker.swift */; };
-		3E55132C1F5CB4EB006111F1 /* QnAErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E55132B1F5CB4EB006111F1 /* QnAErrorProtocol.swift */; };
-		3E55132D1F5CB4F2006111F1 /* QnAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5513291F5CB4AA006111F1 /* QnAError.swift */; };
-		3E55132F1F5CB536006111F1 /* QnAConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E55132E1F5CB536006111F1 /* QnAConfigProtocol.swift */; };
-		3E5513311F5CB56A006111F1 /* QnAConfigDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5513301F5CB56A006111F1 /* QnAConfigDefault.swift */; };
-		3E5513331F5CB599006111F1 /* QnAAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5513321F5CB599006111F1 /* QnAAnswer.swift */; };
-		3E5513351F5CB611006111F1 /* QnAAnswerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5513341F5CB611006111F1 /* QnAAnswerProtocol.swift */; };
+		3E4915441F5CCCBA00614CA2 /* QnAAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49153E1F5CCCBA00614CA2 /* QnAAnswer.swift */; };
+		3E4915451F5CCCBA00614CA2 /* QnAAnswerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49153F1F5CCCBA00614CA2 /* QnAAnswerProtocol.swift */; };
+		3E4915461F5CCCBA00614CA2 /* QnAConfigDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4915401F5CCCBA00614CA2 /* QnAConfigDefault.swift */; };
+		3E4915471F5CCCBA00614CA2 /* QnAConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4915411F5CCCBA00614CA2 /* QnAConfigProtocol.swift */; };
+		3E4915481F5CCCBA00614CA2 /* QnAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4915421F5CCCBA00614CA2 /* QnAError.swift */; };
+		3E4915491F5CCCBA00614CA2 /* QnAErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4915431F5CCCBA00614CA2 /* QnAErrorProtocol.swift */; };
 		4F23F7ACA428CC25A34E6C3AC50A272A /* Pods-QnABotMaker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEACE9B8A049C49C961551F7027F453 /* Pods-QnABotMaker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		605FE63524B0BF19766F3EC5C34454F9 /* QnABotMaker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B91B725112BF4A6B93F5CD30B04221D9 /* QnABotMaker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		773E381409BF3CCC2B9AAE46695124C4 /* Pods-QnABotMaker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F97D9EBC3BC8CD36DA4AE0491CEE91C7 /* Pods-QnABotMaker_Tests-dummy.m */; };
@@ -44,12 +44,12 @@
 		2810526D63D190FB0EEA3EA04BD698C5 /* QnABotMaker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QnABotMaker.xcconfig; sourceTree = "<group>"; };
 		3196309BCE681E9512DF9E8A1A49D8C6 /* Pods-QnABotMaker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QnABotMaker_Tests-resources.sh"; sourceTree = "<group>"; };
 		3888D996216A4565BBC18F4458A00A6E /* Pods-QnABotMaker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QnABotMaker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3E5513291F5CB4AA006111F1 /* QnAError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAError.swift; sourceTree = "<group>"; };
-		3E55132B1F5CB4EB006111F1 /* QnAErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAErrorProtocol.swift; sourceTree = "<group>"; };
-		3E55132E1F5CB536006111F1 /* QnAConfigProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAConfigProtocol.swift; sourceTree = "<group>"; };
-		3E5513301F5CB56A006111F1 /* QnAConfigDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAConfigDefault.swift; sourceTree = "<group>"; };
-		3E5513321F5CB599006111F1 /* QnAAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAAnswer.swift; sourceTree = "<group>"; };
-		3E5513341F5CB611006111F1 /* QnAAnswerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAAnswerProtocol.swift; sourceTree = "<group>"; };
+		3E49153E1F5CCCBA00614CA2 /* QnAAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QnAAnswer.swift; path = QnABotMaker/Classes/QnAAnswer.swift; sourceTree = "<group>"; };
+		3E49153F1F5CCCBA00614CA2 /* QnAAnswerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QnAAnswerProtocol.swift; path = QnABotMaker/Classes/QnAAnswerProtocol.swift; sourceTree = "<group>"; };
+		3E4915401F5CCCBA00614CA2 /* QnAConfigDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QnAConfigDefault.swift; path = QnABotMaker/Classes/QnAConfigDefault.swift; sourceTree = "<group>"; };
+		3E4915411F5CCCBA00614CA2 /* QnAConfigProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QnAConfigProtocol.swift; path = QnABotMaker/Classes/QnAConfigProtocol.swift; sourceTree = "<group>"; };
+		3E4915421F5CCCBA00614CA2 /* QnAError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QnAError.swift; path = QnABotMaker/Classes/QnAError.swift; sourceTree = "<group>"; };
+		3E4915431F5CCCBA00614CA2 /* QnAErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QnAErrorProtocol.swift; path = QnABotMaker/Classes/QnAErrorProtocol.swift; sourceTree = "<group>"; };
 		45438395EBED09BD5CB4D7C9C6E31E91 /* Pods-QnABotMaker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QnABotMaker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		51D2AFE4C9BA0DB9CE7E296987752074 /* Pods-QnABotMaker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QnABotMaker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58C82A773CEF887CC4BF076484FE5B58 /* Pods-QnABotMaker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QnABotMaker_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,12 +211,12 @@
 		E7B0FC4BDC53847B10BD32E2A6151C1D /* QnABotMaker */ = {
 			isa = PBXGroup;
 			children = (
-				3E55132E1F5CB536006111F1 /* QnAConfigProtocol.swift */,
-				3E5513301F5CB56A006111F1 /* QnAConfigDefault.swift */,
-				3E55132B1F5CB4EB006111F1 /* QnAErrorProtocol.swift */,
-				3E5513291F5CB4AA006111F1 /* QnAError.swift */,
-				3E5513341F5CB611006111F1 /* QnAAnswerProtocol.swift */,
-				3E5513321F5CB599006111F1 /* QnAAnswer.swift */,
+				3E49153E1F5CCCBA00614CA2 /* QnAAnswer.swift */,
+				3E49153F1F5CCCBA00614CA2 /* QnAAnswerProtocol.swift */,
+				3E4915401F5CCCBA00614CA2 /* QnAConfigDefault.swift */,
+				3E4915411F5CCCBA00614CA2 /* QnAConfigProtocol.swift */,
+				3E4915421F5CCCBA00614CA2 /* QnAError.swift */,
+				3E4915431F5CCCBA00614CA2 /* QnAErrorProtocol.swift */,
 				14BB0C4E633E56D96CC2B696C53859B2 /* QnABotMaker.swift */,
 				C763C42AAA5FE5EAA856CA94D37B157A /* Support Files */,
 			);
@@ -344,14 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E55132F1F5CB536006111F1 /* QnAConfigProtocol.swift in Sources */,
 				857E1C8FD44A458D43573B29E43B6E77 /* QnABotMaker-dummy.m in Sources */,
 				2CAC6D2F1C3E35425B848EE7941C5C6F /* QnABotMaker.swift in Sources */,
-				3E55132C1F5CB4EB006111F1 /* QnAErrorProtocol.swift in Sources */,
-				3E5513351F5CB611006111F1 /* QnAAnswerProtocol.swift in Sources */,
-				3E5513331F5CB599006111F1 /* QnAAnswer.swift in Sources */,
-				3E5513311F5CB56A006111F1 /* QnAConfigDefault.swift in Sources */,
-				3E55132D1F5CB4F2006111F1 /* QnAError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4915491F5CCCBA00614CA2 /* QnAErrorProtocol.swift in Sources */,
+				3E4915461F5CCCBA00614CA2 /* QnAConfigDefault.swift in Sources */,
+				3E4915481F5CCCBA00614CA2 /* QnAError.swift in Sources */,
+				3E4915451F5CCCBA00614CA2 /* QnAAnswerProtocol.swift in Sources */,
+				3E4915441F5CCCBA00614CA2 /* QnAAnswer.swift in Sources */,
+				3E4915471F5CCCBA00614CA2 /* QnAConfigProtocol.swift in Sources */,
 				90CEE9228E271FEB1CB5DF062B38B74E /* Pods-QnABotMaker_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
