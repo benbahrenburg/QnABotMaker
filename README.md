@@ -1,4 +1,4 @@
-# QnABotMaker
+# QnA Maker - iOS Library for working with the Microsoft QnA Maker Bot Service
 
 Convenience library for working with Microsoft's QnA Maker Service.  Microsoft QnA Maker Service lets you create FAQ Bots quickly.  The QnABotMaker library enables you to use the QnA Maker Service directly from within your iOS app.  Before getting started pleaes check out Microsoft [QnA Maker](https://qnamaker.ai).
 
