@@ -40,7 +40,7 @@ let kbBot = QnABotMaker(knowledgebaseID: "581bd885-5588403d-9935fe3cd325c503", s
 
 * Xcode 8.2 or newer
 * Swift 3.0
-* iOS 9 or greater
+* iOS 10 or greater
 
 
 ## Installation
