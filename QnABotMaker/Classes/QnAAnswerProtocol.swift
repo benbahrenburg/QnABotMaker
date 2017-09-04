@@ -36,7 +36,10 @@ import Foundation
  
  */
 public protocol QnAAnswerProtocol {
+    /// Answer for the provided question(s)
     var answer: String { get }
+    /// Question(s) asked of the service
     var questions: [String] { get }
+    /// Confidence score for the answer provided
     var score: Int { get }
 }

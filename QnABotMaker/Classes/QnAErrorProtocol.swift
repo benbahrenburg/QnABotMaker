@@ -36,7 +36,10 @@ import Foundation
  
  */
 public protocol QnAErrorProtocol: Error {
+    /// Error Title
     var localizedTitle: String { get }
+    /// Error Description
     var localizedDescription: String { get }
+    /// Error code
     var code: Int { get }
 }

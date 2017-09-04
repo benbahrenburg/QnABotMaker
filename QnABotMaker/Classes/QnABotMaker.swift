@@ -48,7 +48,7 @@ public struct QnABotMaker {
      - Parameter subscriptionKey: The Ocp-Apim-Subscription-Key for your https://qnamaker.ai service
      - Parameter config: An optional configuration protocol see QnAConfigProtocol for details
      */
-    init(knowledgebaseID: String, subscriptionKey: String, config: QnAConfigProtocol = QnAConfigDefault()) {
+    public init(knowledgebaseID: String, subscriptionKey: String, config: QnAConfigProtocol = QnAConfigDefault()) {
         let kbKey = knowledgebaseID.trimmingCharacters(in: .whitespacesAndNewlines)
         kbURL = " /knowledgebases/\(kbKey)/generateAnswer"
         self.subscriptionKey = subscriptionKey
@@ -105,7 +105,7 @@ public struct QnABotMaker {
      - Parameter question: The question you are asking
      - Parameter completionHandler: The completion handler with answer or error provided from the service
      */
-    func ask(_ question: String, completionHandler: @escaping ([QnAAnswerProtocol]?, QnAErrorProtocol?) -> Void) {
+    public func ask(_ question: String, completionHandler: @escaping ([QnAAnswerProtocol]?, QnAErrorProtocol?) -> Void) {
         guard let url = getURL() else {
             return completionHandler(nil, QnAError(localizedTitle: "error", localizedDescription: "Invalid URL: Unabled to create API URL", code: 0))
         }

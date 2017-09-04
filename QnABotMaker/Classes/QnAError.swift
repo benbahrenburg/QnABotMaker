@@ -36,8 +36,11 @@ import Foundation
  
  */
 public struct QnAError: QnAErrorProtocol {
+    /// Error Title
     public var localizedTitle: String
+    /// Error Description
     public var localizedDescription: String
+    /// Error code
     public var code: Int
     
     init(localizedTitle: String?, localizedDescription: String, code: Int) {

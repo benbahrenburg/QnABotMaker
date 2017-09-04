@@ -36,7 +36,10 @@ import Foundation
  
  */
 public struct QnAAnswer: QnAAnswerProtocol {
+    /// Answer for the provided question(s)
     public var answer: String
+    /// Question(s) asked of the service
     public var questions: [String]
+    /// Confidence score for the answer provided
     public var score: Int
 }
