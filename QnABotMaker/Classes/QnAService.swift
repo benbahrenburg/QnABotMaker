@@ -74,7 +74,7 @@ fileprivate struct serviceHelpers {
 
 /**
  
-QnA Service Struct
+QnA Service class
  
  Provides the ability to ask the Microsoft QnA Maker Service a query
  
