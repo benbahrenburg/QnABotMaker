@@ -90,4 +90,4 @@ Ben Bahrenburg, [@bencoding](https://twitter.com/bencoding)
 
 ## License
 
-QnABotMaker is available under the MIT license. See the LICENSE file for more info.
+QnABotMaker is available under the MIT license. See the [LICENSE file](https://github.com/benbahrenburg/QnABotMaker/blob/master/LICENSE) for more info.
