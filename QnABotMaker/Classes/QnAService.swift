@@ -30,12 +30,12 @@ import Foundation
 
 /**
  
-QnA Bot Maker Struct
+QnA Service Struct
  
  Provides the ability to ask the Microsoft QnA Maker Service a query
  
  */
-public struct QnABotMaker {
+public struct QnAService {
     fileprivate let kbURL: String!
     fileprivate let subscriptionKey: String!
     fileprivate let session: URLSession!

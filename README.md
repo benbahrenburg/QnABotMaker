@@ -28,11 +28,11 @@ Next we will need your <b>Subscription Key</b> or <b>subscriptionKey</b>, this i
 Ocp-Apim-Subscription-Key: <b>b73f2abc20784927a330c7ad9e354e86</b>
 
 
-Finally, you will use these parameters when creating an new instance of the QnABotMaker library as shown in the below example
+Finally, you will use these parameters when creating an new instance of the QnAService struct as shown in the below example
 
 ```swift
 
-let kbBot = QnABotMaker(knowledgebaseID: "581bd885-5588403d-9935fe3cd325c503", subscriptionKey: "b73f2abc20784927a330c7ad9e354e86")
+let bot = QnAService(knowledgebaseID: "581bd885-5588403d-9935fe3cd325c503", subscriptionKey: "b73f2abc20784927a330c7ad9e354e86")
 
 ```
 
@@ -71,9 +71,9 @@ The following shows the library inaction.
 
 ```swift
 
-let kbBot = QnABotMaker(knowledgebaseID: "<<< MY KB ID >>>", subscriptionKey: "<<< MY SUBSCRIPTION KEY >>>")
+let bot = QnAService(knowledgebaseID: "<<< MY KB ID >>>", subscriptionKey: "<<< MY SUBSCRIPTION KEY >>>")
 
-kbBot.ask("hello", completionHandler: {(answers, error) in
+bot.ask("hello", completionHandler: {(answers, error) in
     if let error = error {
         return print("error: \(error)")
     }

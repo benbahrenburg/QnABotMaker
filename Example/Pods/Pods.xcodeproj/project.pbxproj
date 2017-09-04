@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CAC6D2F1C3E35425B848EE7941C5C6F /* QnABotMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB0C4E633E56D96CC2B696C53859B2 /* QnABotMaker.swift */; };
+		2CAC6D2F1C3E35425B848EE7941C5C6F /* QnAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB0C4E633E56D96CC2B696C53859B2 /* QnAService.swift */; };
 		3E0721BD1F5CE42A005EEE93 /* QnAConfigDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4915401F5CCCBA00614CA2 /* QnAConfigDefault.swift */; };
 		3E0721BE1F5CE42E005EEE93 /* QnAAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49153E1F5CCCBA00614CA2 /* QnAAnswer.swift */; };
 		3E0721BF1F5CE431005EEE93 /* QnAAnswerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49153F1F5CCCBA00614CA2 /* QnAAnswerProtocol.swift */; };
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		0E7F9B15F984FE226F0FA337B88680D4 /* QnABotMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QnABotMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14BB0C4E633E56D96CC2B696C53859B2 /* QnABotMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QnABotMaker.swift; path = QnABotMaker/Classes/QnABotMaker.swift; sourceTree = "<group>"; };
+		14BB0C4E633E56D96CC2B696C53859B2 /* QnAService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QnAService.swift; path = QnABotMaker/Classes/QnAService.swift; sourceTree = "<group>"; };
 		197C177F411AE400114B9682F367E340 /* QnABotMaker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QnABotMaker-prefix.pch"; sourceTree = "<group>"; };
 		231081D73F12FA205D580A495344DF51 /* Pods-QnABotMaker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-QnABotMaker_Example.modulemap"; sourceTree = "<group>"; };
 		24221BE488FE937926A31E61FDF82DE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 				3E4915411F5CCCBA00614CA2 /* QnAConfigProtocol.swift */,
 				3E4915421F5CCCBA00614CA2 /* QnAError.swift */,
 				3E4915431F5CCCBA00614CA2 /* QnAErrorProtocol.swift */,
-				14BB0C4E633E56D96CC2B696C53859B2 /* QnABotMaker.swift */,
+				14BB0C4E633E56D96CC2B696C53859B2 /* QnAService.swift */,
 				C763C42AAA5FE5EAA856CA94D37B157A /* Support Files */,
 			);
 			name = QnABotMaker;
@@ -351,7 +351,7 @@
 				3E0721BD1F5CE42A005EEE93 /* QnAConfigDefault.swift in Sources */,
 				3E0721C21F5CE440005EEE93 /* QnAErrorProtocol.swift in Sources */,
 				3E0721BE1F5CE42E005EEE93 /* QnAAnswer.swift in Sources */,
-				2CAC6D2F1C3E35425B848EE7941C5C6F /* QnABotMaker.swift in Sources */,
+				2CAC6D2F1C3E35425B848EE7941C5C6F /* QnAService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
