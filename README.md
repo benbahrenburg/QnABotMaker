@@ -18,17 +18,15 @@ Content-Type: application/json
 
 The QnABotMaker library needs a few of these parameters in order to connect to the [QnA Maker](https://qnamaker.ai) service.
 
-First we need your <b>knowledgebase identifier</b> or <b>knowledgebaseID</b>, this is the highlighted shown below.
+1) First we need your <b>knowledgebase identifier</b> or <b>knowledgebaseID</b>, this is the highlighted shown below.
 
 POST /knowledgebases/<b>581bd885-5588403d-9935fe3cd325c503</b>/generateAnswer
 
-
-Next we will need your <b>Subscription Key</b> or <b>subscriptionKey</b>, this is the highlighted shown below.
+2) Next we will need your <b>Subscription Key</b> or <b>subscriptionKey</b>, this is the highlighted shown below.
 
 Ocp-Apim-Subscription-Key: <b>b73f2abc20784927a330c7ad9e354e86</b>
 
-
-Finally, you will use these parameters when creating an new instance of the QnAService struct as shown in the below example
+3) Finally, you will use these parameters when creating an new instance of the QnAService struct as shown in the below example
 
 ```swift
 
@@ -71,7 +69,7 @@ The following shows the library inaction.
 
 ```swift
 
-let bot = QnAService(knowledgebaseID: "<<< MY KB ID >>>", subscriptionKey: "<<< MY SUBSCRIPTION KEY >>>")
+let bot = QnAService(knowledgebaseID: "OUR-KB-ID", subscriptionKey: "OUR-SUBSCRIPTION-KEY")
 
 bot.askQuestion("hello", completionHandler: {(answers, error) in
     if let error = error {
