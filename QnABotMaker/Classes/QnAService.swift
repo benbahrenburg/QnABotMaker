@@ -114,7 +114,7 @@ open class QnAService {
      - Parameter question: The question you are asking
      - Parameter completionHandler: The completion handler with answer or error provided from the service
      */
-    open func ask(_ question: String, completionHandler: @escaping ([QnAAnswerProtocol]?, QnAErrorProtocol?) -> Void) {
+    open func askQuestion(_ question: String, completionHandler: @escaping ([QnAAnswerProtocol]?, QnAErrorProtocol?) -> Void) {
         guard let url = getURL() else {
             return completionHandler(nil, QnAError(localizedTitle: "error", localizedDescription: "Invalid URL: Unabled to create API URL", code: 0))
         }

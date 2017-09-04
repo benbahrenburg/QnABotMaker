@@ -65,7 +65,7 @@ Copy all `*.swift` files contained in `QnABotMaker/Classes/` directory into your
 
 ## Using
 
-Using QnABotMaker couldn't be easier.  You simply create a new instance of the library and provide the <b>ask</b> function with a question.  The completion hander, <b>completionHandler</b>, will provide the QnA answers or an error if necessary.
+Using QnABotMaker couldn't be easier.  You simply create a new instance of the library and provide the <b>askQuestion</b> function with a question.  The completion hander, <b>completionHandler</b>, will provide the QnA answers or an error if necessary.
 
 The following shows the library inaction.
 
@@ -73,7 +73,7 @@ The following shows the library inaction.
 
 let bot = QnAService(knowledgebaseID: "<<< MY KB ID >>>", subscriptionKey: "<<< MY SUBSCRIPTION KEY >>>")
 
-bot.ask("hello", completionHandler: {(answers, error) in
+bot.askQuestion("hello", completionHandler: {(answers, error) in
     if let error = error {
         return print("error: \(error)")
     }
