@@ -71,7 +71,7 @@ Once you have your Swift package set up, adding Alamofire as a dependency is as 
 
 ```swift
 dependencies: [
-    .Package(url: "https://github.com/Alamofire/Alamofire.git", majorVersion: 4)
+    .Package(url: "https://github.com/benbahrenburg/QnABotMaker.git", majorVersion: 1)
 ]
 ```
 
@@ -83,7 +83,7 @@ The following shows the library inaction.
 
 ```swift
 
-let bot = QnAService(knowledgebaseID: "OUR-KB-ID", subscriptionKey: "OUR-SUBSCRIPTION-KEY")
+let bot = QnAService(knowledgebaseID: "YOUR-KB-ID", subscriptionKey: "YOUR-SUBSCRIPTION-KEY")
 
 bot.askQuestion("hello", completionHandler: {(answers, error) in
     if let error = error {
