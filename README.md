@@ -83,7 +83,7 @@ The following shows the library inaction.
 
 ```swift
 
-let bot = QnAService(knowledgebaseID: "OUR-KB-ID", subscriptionKey: "OUR-SUBSCRIPTION-KEY")
+let bot = QnAService(knowledgebaseID: "YOUR-KB-ID", subscriptionKey: "YOUR-SUBSCRIPTION-KEY")
 
 bot.askQuestion("hello", completionHandler: {(answers, error) in
     if let error = error {
