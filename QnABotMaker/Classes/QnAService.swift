@@ -30,12 +30,56 @@ import Foundation
 
 /**
  
+ QnA Service Helpers Struct
+ 
+ Helpers to work with the QnA Service Input and Output
+ 
+ */
+fileprivate struct serviceHelpers {
+    static func validResults(dict: NSDictionary) -> Bool {
+        if dict["answers"] != nil {
+            return true
+        }
+        if dict["error"] != nil {
+            return true
+        }
+        
+        return false
+    }
+    
+    static func hasError(dict: NSDictionary) -> Bool {
+        return dict["error"] != nil
+    }
+    
+    static func buildError(dict: NSDictionary, statusCode: Int) -> QnAError {
+        let errorObj = dict["error"] as! NSDictionary
+        let errorTile = errorObj["code"] as! String
+        let messages = errorObj["message"] as! [String]
+        return QnAError(localizedTitle: errorTile, localizedDescription: messages.first ?? "error", code: statusCode)
+    }
+    
+    static func buildAnswers(dict: NSDictionary) -> [QnAAnswer] {
+        var answers = [QnAAnswer]()
+        let items = dict["answers"] as! NSArray
+        for item in items {
+            let raw = item as! NSDictionary
+            let answer = raw["answer"] as! String
+            let questions = raw["questions"] as! [String]
+            let score = raw["score"] as! Int
+            answers.append(QnAAnswer(answer: answer, questions: questions, score: score))
+        }
+        return answers
+    }
+}
+
+/**
+ 
 QnA Service Struct
  
  Provides the ability to ask the Microsoft QnA Maker Service a query
  
  */
-public struct QnAService {
+open class QnAService {
     fileprivate let kbURL: String!
     fileprivate let subscriptionKey: String!
     fileprivate let session: URLSession!
@@ -64,48 +108,13 @@ public struct QnAService {
         return url
     }
     
-    private func validResults(dict: NSDictionary) -> Bool {
-        if dict["answers"] != nil {
-            return true
-        }
-        if dict["error"] != nil {
-            return true
-        }
-        
-        return false
-    }
-    
-    private func hasError(dict: NSDictionary) -> Bool {
-        return dict["error"] != nil
-    }
-    
-    private func buildError(dict: NSDictionary, statusCode: Int) -> QnAError {
-        let errorObj = dict["error"] as! NSDictionary
-        let errorTile = errorObj["code"] as! String
-        let messages = errorObj["message"] as! [String]
-        return QnAError(localizedTitle: errorTile, localizedDescription: messages.first ?? "error", code: statusCode)
-    }
-    
-    private func buildAnswers(dict: NSDictionary) -> [QnAAnswer] {
-        var answers = [QnAAnswer]()
-        let items = dict["answers"] as! NSArray
-        for item in items {
-            let raw = item as! NSDictionary
-            let answer = raw["answer"] as! String
-            let questions = raw["questions"] as! [String]
-            let score = raw["score"] as! Int
-            answers.append(QnAAnswer(answer: answer, questions: questions, score: score))
-        }
-        return answers
-    }
-
     /**
      The ask method allows you to ask a question of your Microsoft QnA Service
      
      - Parameter question: The question you are asking
      - Parameter completionHandler: The completion handler with answer or error provided from the service
      */
-    public func ask(_ question: String, completionHandler: @escaping ([QnAAnswerProtocol]?, QnAErrorProtocol?) -> Void) {
+    open func ask(_ question: String, completionHandler: @escaping ([QnAAnswerProtocol]?, QnAErrorProtocol?) -> Void) {
         guard let url = getURL() else {
             return completionHandler(nil, QnAError(localizedTitle: "error", localizedDescription: "Invalid URL: Unabled to create API URL", code: 0))
         }
@@ -135,14 +144,14 @@ public struct QnAService {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] {
                     let results = json as NSDictionary
                     
-                    guard self.validResults(dict: results) else {
+                    guard serviceHelpers.validResults(dict: results) else {
                         return completionHandler(nil, QnAError(localizedTitle: "error", localizedDescription: "Invalid API Results provided", code: httpResponse.statusCode))
                     }
                     
-                    if self.hasError(dict: results) {
-                        return completionHandler(nil, self.buildError(dict: results, statusCode: httpResponse.statusCode))
+                    if serviceHelpers.hasError(dict: results) {
+                        return completionHandler(nil, serviceHelpers.buildError(dict: results, statusCode: httpResponse.statusCode))
                     }
-                    return completionHandler(self.buildAnswers(dict: results), nil)
+                    return completionHandler(serviceHelpers.buildAnswers(dict: results), nil)
                 }
                 
             } catch {
