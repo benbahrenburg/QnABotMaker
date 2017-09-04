@@ -1,4 +1,5 @@
-# QnA Maker - iOS Library for working with the Microsoft QnA Maker Bot Service
+# QnA Bot Maker
+__iOS Library for working with the Microsoft QnA Maker Bot Service__
 
 Convenience library for working with Microsoft's QnA Maker Service.  Microsoft QnA Maker Service lets you create FAQ Bots quickly.  The QnABotMaker library enables you to use the QnA Maker Service directly from within your iOS app.  Before getting started pleaes check out Microsoft [QnA Maker](https://qnamaker.ai).
 
@@ -43,6 +44,8 @@ let bot = QnAService(knowledgebaseID: "581bd885-5588403d-9935fe3cd325c503", subs
 
 ## Installation
 
+__Cocoapods__
+
 QnABotMaker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -60,6 +63,17 @@ __Manually__
 
 Copy all `*.swift` files contained in `QnABotMaker/Classes/` directory into your project. 
 
+__Swift Package Manager__
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Alamofire does support its use on supported platforms. 
+
+Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .Package(url: "https://github.com/Alamofire/Alamofire.git", majorVersion: 4)
+]
+```
 
 ## Using
 
