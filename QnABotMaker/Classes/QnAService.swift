@@ -1,5 +1,5 @@
 /*
-
+ 
  Project: QnABotMaker
  Description: Convenience library for working with Microsoft's QnA Maker Service
  
@@ -58,12 +58,31 @@ fileprivate struct serviceHelpers {
         return QnAError(localizedTitle: errorTile, localizedDescription: messages.first ?? "error", code: statusCode)
     }
     
+    // Microsoft QnA provides the requests in HTML format.  The below decodes the provided string into one that we can work with in Swift.
+    // This method is a fork of the one provided in the below stackoverflow post.
+    // https://stackoverflow.com/questions/25607247/how-do-i-decode-html-entities-in-swift
+    static func htmlDecoded(input: String)->String {
+        guard input.characters.count > 0 else { return input }
+        guard let encodedData = input.data(using: .utf8) else { return input }
+        
+        let attributedOptions: [String : Any] = [
+            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue]
+        
+        do {
+            return try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil).string
+        } catch {
+            print("Error: \(error)")
+            return input
+        }
+    }
+    
     static func buildAnswers(dict: NSDictionary) -> [QnAAnswer] {
         var answers = [QnAAnswer]()
         let items = dict["answers"] as! NSArray
         for item in items {
             let raw = item as! NSDictionary
-            let answer = raw["answer"] as! String
+            let answer = htmlDecoded(input: raw["answer"] as! String)
             let questions = raw["questions"] as! [String]
             let score = raw["score"] as! Int
             answers.append(QnAAnswer(answer: answer, questions: questions, score: score))
@@ -74,7 +93,7 @@ fileprivate struct serviceHelpers {
 
 /**
  
-QnA Service class
+ QnA Service class
  
  Provides the ability to ask the Microsoft QnA Maker Service a query
  
@@ -84,7 +103,7 @@ open class QnAService {
     fileprivate let subscriptionKey: String!
     fileprivate let session: URLSession!
     fileprivate let config: QnAConfigProtocol!
-
+    
     /**
      Creates a new instance of the QnABotMaker struct
      
@@ -94,7 +113,7 @@ open class QnAService {
      */
     public init(knowledgebaseID: String, subscriptionKey: String, config: QnAConfigProtocol = QnAConfigDefault()) {
         let kbKey = knowledgebaseID.trimmingCharacters(in: .whitespacesAndNewlines)
-        kbURL = " /knowledgebases/\(kbKey)/generateAnswer"
+        kbURL = "/knowledgebases/\(kbKey)/generateAnswer"
         self.subscriptionKey = subscriptionKey
         self.config = config
         session = URLSession(configuration: config.sessionConfig) // Load configuration into Session
