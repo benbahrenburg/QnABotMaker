@@ -40,7 +40,7 @@ public struct QnAConfigDefault: QnAConfigProtocol {
     public var hostUrl: String
     /// The default configuration for URLSessionConfiguration to be used when connecting to the Microsoft QnA Service
     public var sessionConfig: URLSessionConfiguration
-    init() {
+    public init() {
         hostUrl = "https://westus.api.cognitive.microsoft.com/qnamaker/v2.0"
         sessionConfig = URLSessionConfiguration.default
     }

@@ -62,12 +62,12 @@ fileprivate struct serviceHelpers {
     // This method is a fork of the one provided in the below stackoverflow post.
     // https://stackoverflow.com/questions/25607247/how-do-i-decode-html-entities-in-swift
     static func htmlDecoded(input: String)->String {
-        guard input.characters.count > 0 else { return input }
+        guard input.count > 0 else { return input }
         guard let encodedData = input.data(using: .utf8) else { return input }
         
-        let attributedOptions: [String : Any] = [
-            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue]
+        let attributedOptions: [NSAttributedString.DocumentReadingOptionKey : Any] = [
+            NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8]
         
         do {
             return try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil).string
