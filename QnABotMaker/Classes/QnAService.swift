@@ -66,8 +66,8 @@ fileprivate struct serviceHelpers {
         guard let encodedData = input.data(using: .utf8) else { return input }
         
         let attributedOptions: [NSAttributedString.DocumentReadingOptionKey : Any] = [
-            NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8]
+            NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html.rawValue,
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue]
         
         do {
             return try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil).string
