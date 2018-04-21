@@ -38,7 +38,7 @@ let bot = QnAService(knowledgebaseID: "581bd885-5588403d-9935fe3cd325c503", subs
 ## Requirements
 
 * Xcode 9.1 or newer
-* Swift 4.0
+* Swift 4.1
 * iOS 10 or greater
 
 
