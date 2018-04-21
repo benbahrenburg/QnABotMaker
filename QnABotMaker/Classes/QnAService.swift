@@ -84,7 +84,7 @@ fileprivate struct serviceHelpers {
             let raw = item as! NSDictionary
             let answer = htmlDecoded(input: raw["answer"] as! String)
             let questions = raw["questions"] as! [String]
-            let score = raw["score"] as! Int
+            let score = raw["score"] as! Double
             answers.append(QnAAnswer(answer: answer, questions: questions, score: score))
         }
         return answers

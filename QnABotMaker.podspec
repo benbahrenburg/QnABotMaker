@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'QnABotMaker'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Simplifies working with Microsoft QnA Maker on iOS.'
 
   s.description   = <<-DESC

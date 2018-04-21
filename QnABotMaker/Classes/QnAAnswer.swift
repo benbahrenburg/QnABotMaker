@@ -41,5 +41,5 @@ public struct QnAAnswer: QnAAnswerProtocol {
     /// Question(s) asked of the service
     public var questions: [String]
     /// Confidence score for the answer provided
-    public var score: Int
+    public var score: Double
 }

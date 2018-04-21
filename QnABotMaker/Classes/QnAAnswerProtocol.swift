@@ -41,5 +41,5 @@ public protocol QnAAnswerProtocol {
     /// Question(s) asked of the service
     var questions: [String] { get }
     /// Confidence score for the answer provided
-    var score: Int { get }
+    var score: Double { get }
 }
