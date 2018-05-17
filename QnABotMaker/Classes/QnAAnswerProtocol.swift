@@ -5,7 +5,7 @@
  
  MIT License
  
- Copyright (c) 2017 Ben Bahrenburg @bencoding
+ Copyright (c) 2018 Ben Bahrenburg @bencoding
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
