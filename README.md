@@ -19,13 +19,13 @@ Content-Type: application/json
 
 The QnABotMaker library needs a few of these parameters in order to connect to the [QnA Maker](https://qnamaker.ai) service.
 
-1) First we need to know your host url.  This is the url provided with the host key. An example of this is the highlighted shown below.
+1) First we need to know your host value.  This is the url provided with the host key. An example of this is the highlighted shown below.
+
+Host: <b>https://testbot.azurewebsites.net/qnamaker</b>
 
 2) Next we need your <b>knowledgebase identifier</b> or <b>knowledgebaseID</b>, this is the highlighted shown below.
 
 POST /knowledgebases/<b>581bd885-5588403d-9935fe3cd325c503</b>/generateAnswer
-
-Host: <b>https://testbot.azurewebsites.net/qnamaker</b>
 
 3) The last configuration element we need is your endpoint key value, this is the highlighted shown below.
 
