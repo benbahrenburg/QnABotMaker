@@ -11,27 +11,32 @@ Once you have published your QnA Service you will see a <b>Sample HTTP request</
 
 ~~~
 POST /knowledgebases/581bd885-5588403d-9935fe3cd325c503/generateAnswer
-Host: https://westus.api.cognitive.microsoft.com/qnamaker/v2.0
-Ocp-Apim-Subscription-Key: b73f2abc20784927a330c7ad9e354e86
+Host: https://testbot.azurewebsites.net/qnamaker
+Authorization: EndpointKey aa000344-9998-4d3b-9df3-52bf7c4f7ffd
 Content-Type: application/json
 {"question":"hi"}
 ~~~
 
 The QnABotMaker library needs a few of these parameters in order to connect to the [QnA Maker](https://qnamaker.ai) service.
 
-1) First we need your <b>knowledgebase identifier</b> or <b>knowledgebaseID</b>, this is the highlighted shown below.
+1) First we need to know your host url.  This is the url provided with the host key. An example of this is the highlighted shown below.
+
+2) Next we need your <b>knowledgebase identifier</b> or <b>knowledgebaseID</b>, this is the highlighted shown below.
 
 POST /knowledgebases/<b>581bd885-5588403d-9935fe3cd325c503</b>/generateAnswer
 
-2) Next we will need your <b>Subscription Key</b> or <b>subscriptionKey</b>, this is the highlighted shown below.
+Host: <b>https://testbot.azurewebsites.net/qnamaker</b>
 
-Ocp-Apim-Subscription-Key: <b>b73f2abc20784927a330c7ad9e354e86</b>
+3) The last configuration element we need is your endpoint key value, this is the highlighted shown below.
 
-3) Finally, you will use these parameters when creating an new instance of the QnAService struct as shown in the below example
+Authorization: EndpointKey <b>aa000344-9998-4d3b-9df3-52bf7c4f7ffd</b>
+
+4) Finally, you will use these parameters when creating an new instance of the QnAService struct as shown in the below example
 
 ```swift
 
-let bot = QnAService(knowledgebaseID: "581bd885-5588403d-9935fe3cd325c503", subscriptionKey: "b73f2abc20784927a330c7ad9e354e86")
+let bot = QnAService(host: "https://testbot.azurewebsites.net/qnamaker", knowledgebaseID: "5581bd885-5588403d-9935fe3cd325c503", endpointKey: "aa000344-9998-4d3b-9df3-52bf7c4f7ffd")
+
 
 ```
 
@@ -83,7 +88,7 @@ The following shows the library inaction.
 
 ```swift
 
-let bot = QnAService(knowledgebaseID: "YOUR-KB-ID", subscriptionKey: "YOUR-SUBSCRIPTION-KEY")
+let bot = QnAService(host: "YOUR-HOST-URL", knowledgebaseID: "YOUR-KB-ID", endpointKey: "YOUR-ENDPOINT-KEY")
 
 bot.askQuestion("hello", completionHandler: {(answers, error) in
     if let error = error {
