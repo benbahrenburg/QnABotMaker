@@ -38,20 +38,20 @@ import Foundation
 open class QnAService {
     fileprivate let endpointKey: String!
     fileprivate let serviceURL: String!
-    fileprivate let subscriptionKey: String!
+    fileprivate let knowledgebaseID: String!
     fileprivate let session: URLSession!
     
     /**
      Creates a new instance of the QnABotMaker struct
      
      - Parameter host: The host url for yourhttps://qnamaker.ai service
-     - Parameter subscriptionKey: The subscription key used in your generateAnswer url https://qnamaker.ai service
+     - Parameter knowledgebaseID: The knowledgebase identifier used in your generateAnswer url https://qnamaker.ai service
      - Parameter endpointKey: Your EndpointKey guid
      - Parameter sessionConfiguration: An optional URLSessionConfiguration for your connection
      */
-    public init(host: String, subscriptionKey: String, endpointKey: String, sessionConfiguration: URLSessionConfiguration = URLSessionConfiguration.default) {
-        self.serviceURL = "\(host)/knowledgebases/\(subscriptionKey)/generateAnswer/"
-        self.subscriptionKey = subscriptionKey
+    public init(host: String, knowledgebaseID: String, endpointKey: String, sessionConfiguration: URLSessionConfiguration = URLSessionConfiguration.default) {
+        self.serviceURL = "\(host)/knowledgebases/\(knowledgebaseID)/generateAnswer/"
+        self.knowledgebaseID = knowledgebaseID
         self.endpointKey = endpointKey
         session = URLSession(configuration: sessionConfiguration) // Load configuration into Session
     }
