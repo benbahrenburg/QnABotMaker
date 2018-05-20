@@ -35,7 +35,7 @@ import UIKit
  Helpers to work with the QnA Service Input and Output
  
  */
-internal struct ServiceHelpers {
+internal struct QnAServiceHelpers {
     static func validResults(dict: NSDictionary) -> Bool {
         if dict["answers"] != nil {
             return true

@@ -96,14 +96,14 @@ open class QnAService {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] {
                     let results = json as NSDictionary
                     
-                    guard ServiceHelpers.validResults(dict: results) else {
+                    guard QnAServiceHelpers.validResults(dict: results) else {
                         return completionHandler(nil, QnAError(localizedTitle: "error", localizedDescription: "Invalid API Results provided", code: httpResponse.statusCode))
                     }
                     
-                    if ServiceHelpers.hasError(dict: results) {
-                        return completionHandler(nil, ServiceHelpers.buildError(dict: results, statusCode: httpResponse.statusCode))
+                    if QnAServiceHelpers.hasError(dict: results) {
+                        return completionHandler(nil, QnAServiceHelpers.buildError(dict: results, statusCode: httpResponse.statusCode))
                     }
-                    return completionHandler(ServiceHelpers.buildAnswers(dict: results), nil)
+                    return completionHandler(QnAServiceHelpers.buildAnswers(dict: results), nil)
                 }
                 
             } catch {
