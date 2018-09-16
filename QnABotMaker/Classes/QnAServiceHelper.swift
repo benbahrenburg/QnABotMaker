@@ -52,7 +52,6 @@ internal struct QnAServiceHelpers {
     }
     
     static func buildError(dict: NSDictionary, statusCode: Int) -> QnAError {
-        print(dict)
         let errorObj = dict["error"] as! NSDictionary
         let errorTile = errorObj["code"] as! String
         let messages = errorObj["message"] as! [String]
